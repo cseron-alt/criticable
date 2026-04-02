@@ -1,4 +1,4 @@
-export const MAX_IMAGE_UPLOAD_BYTES = 1024 * 1024;
+export const MAX_IMAGE_UPLOAD_BYTES = 2 * 1024 * 1024;
 const DEFAULT_MAX_DIMENSION = 1600;
 const MIN_DIMENSION = 960;
 const QUALITY_STEPS = [0.82, 0.72, 0.64, 0.56, 0.48, 0.4];
@@ -104,6 +104,6 @@ export async function processImageForUpload(file: File): Promise<ProcessedImage>
   }
 
   throw new Error(
-    "La imagen sigue siendo demasiado pesada. Usa una imagen de menos de 1024 KB o con menos resolución.",
+    "La imagen sigue siendo demasiado pesada. Usa una imagen de menos de 2 MB o con menos resolución.",
   );
 }
